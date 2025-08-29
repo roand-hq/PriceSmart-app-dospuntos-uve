@@ -17,7 +17,7 @@ import salesRoutes from "./src/routes/sales.js";
 
 // Creo una constante que es igual a la libreria que importé
 const app = express();
-
+app.use(express.json()); // Indico que voy a usar JSON
 // Que acepte cookies
 app.use(cookieParser());
 
@@ -27,7 +27,6 @@ app.use("/api/customers", customersRoutes);
 app.use("/api/employee", employeeRoutes);
 app.use("/api/branches", branchesRoutes);
 app.use("/api/reviews", reviewsRoutes);
-b;
 
 app.use("/api/registerEmployees", registerEmployeesRoutes);
 app.use("/api/login", loginRoutes);
